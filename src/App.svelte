@@ -1,11 +1,12 @@
 <script>
   import Navbar from "./Navbar.svelte";
-  import Title from "./Title.svelte";
-  let fruits = ["apple", "orange", "lemon"];
+  import ExpensesList from "./ExpensesList.svelte";
+  import expensesData from "./expenses";
+  let expenses = [...expensesData];
 </script>
 
 <Navbar />
 
-{#each fruits as item}
-  <Title title= {item} />
-{/each}
+<main class="content">
+  <ExpensesList {expenses} />
+</main>
