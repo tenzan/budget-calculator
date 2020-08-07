@@ -1,5 +1,5 @@
 <script>
-import {getContext} from 'svelte';
+  import { getContext } from "svelte";
   export let id;
   export let name = "";
   export let amount = 0;
@@ -7,7 +7,7 @@ import {getContext} from 'svelte';
   function toggleAmount() {
     displayAmount = !displayAmount;
   }
-  const removeExpense= getContext('remove');
+  const removeExpense = getContext("remove");
 </script>
 
 <article class="single-expense">
@@ -26,8 +26,6 @@ import {getContext} from 'svelte';
     <button class="expense-btn edit-btn">
       <i class="fas fa-pen" />
     </button>
-  </div>
-  <div class="expense-buttons">
     <button class="expense-btn delete-btn" on:click={removeExpense(id)}>
       <i class="fas fa-trash" />
     </button>
